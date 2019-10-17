@@ -66,7 +66,7 @@ def predict(prob, file_path):
     return top1
 
 if __name__ == '__main__':
-    image = cv2.imread("car.jpg")
+    image = cv2.imread("tiger.jpeg")
     image = cv2.resize(src=image, dsize=(224, 224))
     image = image.reshape(1, 224, 224, 3)
 
