@@ -113,7 +113,7 @@ class ResNet50():
         '''
         with tf.variable_scope(name):
             conv_filter, bias = self._get_conv_parameter(filter_size, in_channels, out_channels, name)
-            conv = tf.nn.conv2d(input, filter=conv_filter, strides=[0, stride, stride, 0], padding=padding)
+            conv = tf.nn.conv2d(input, filter=conv_filter, strides=[1, stride, stride, 1], padding=padding)
             conv_bias = tf.nn.bias_add(conv, bias)
             return conv_bias
 
